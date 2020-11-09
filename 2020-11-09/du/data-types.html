@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+            // numbers
+            const integer = 10;
+            const float = 10.10;
+            const exp = 10e10;
+            const binary = 0b10;
+            const octal = 0o10;
+            const hex = 0x10;
+            console.log(typeof typeof integer)
+
+            // type check 
+            if (typeof integer === 'number') {
+                console.log('Ez egy szám');
+            } else {
+                console.log('Ez nem szám');
+            }
+
+            // automatic semmicolon insertation
+            // let a = [1, 2, 3]
+            // let b = [1, 2, 3]
+            // [a, b] = [b, a]
+
+            // string
+            const text = 'Ez egy szöveg';
+            // SOSE HASZNÁLD ÍGY:
+            // let textObject = new String('hello');
+
+            // Boolean, true vagy false
+            let logical = true;
+
+            // Minden primitív IMMUTABLE
+            logical = false;
+
+            // null, undefined
+            let toiletPaper;
+            console.log(toiletPaper);
+            let manualSetNull = null;
+
+            console.log('return value: ', sample());
+            function sample() {
+                return hoisted;
+            }
+            var hoisted = 'hoisted';
+            // innentől lesz meg az éréke
+
+            // naming conventions
+            let tax;
+            // a-z, A_Z, 0-9
+            const standardHungarianTaxRateInPercent = 27;
+            console.log(standardHungarianTaxRateInPercent);
+        </script>
+    </body>
+
+</html>
