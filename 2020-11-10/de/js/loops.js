@@ -51,10 +51,10 @@ const person = {
 // Object.prototype.blabla = 'blabla'
 
 for (const key in person) {
-    // key string
+    // key is a string
     // person.key, person.'firstName'
 
-    // Object.prototype.call
+    // Még szebb lenne: Object.prototype.hasOwnProperty.call(person, key)
     if (person.hasOwnProperty(key)) {
         console.log(key, ':', person[key]);
     }
@@ -72,9 +72,9 @@ arr[1000] = 1000;
 //     console.log(arr[i]);
 // }
 
-for (const value of arr) {
-    console.log(value);
-}
+// for (const value of arr) {
+//     console.log(value);
+// }
 
 for (const key in arr) {
     if (arr.hasOwnProperty(key)) {
