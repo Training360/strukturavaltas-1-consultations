@@ -1,3 +1,5 @@
+'use strict';
+
 function bubbleSort(arr) {
     let swapped;
     do {
@@ -17,3 +19,7 @@ function bubbleSort(arr) {
 const arr = [435, 567, 8, 33, 346, 67, 678, 235, 225]
 
 console.log(bubbleSort(arr));
+
+// function defultParam({ firstName = 'John', lastName = 'Doe' } = {}) {
+
+// }

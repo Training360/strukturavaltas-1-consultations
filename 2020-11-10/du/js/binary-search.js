@@ -1,9 +1,14 @@
+'use strict';
+
+// Big O notation
+
 function binarySearch(arr, search) {
     let start = 0;
     let end = arr.length - 1;
 
     while (start <= end) {
         let mid = Math.floor((start + end) / 2);
+
         if (arr[mid] === search) {
             return true
         }
@@ -17,5 +22,7 @@ function binarySearch(arr, search) {
 }
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const float = [1.23, 2.34, 3.23234234, 4.43535];
 
 console.log(binarySearch(numbers, 5));
