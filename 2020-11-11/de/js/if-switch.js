@@ -62,7 +62,7 @@ const arr = ['Elégtelen', 'Elégséges', 'Közepes', 'Jó', 'Jeles'];
 
 // grade 1-5
 // index: 0-4
-console.log(arr[grade - 1])
+console.log(arr[grade - 1]);
 
 console.log('----OBJ---');
 

@@ -1,5 +1,3 @@
-'use strict';
-
 function bubbleSort(arr) {
     let swapped;
     do {
@@ -16,10 +14,14 @@ function bubbleSort(arr) {
     return arr;
 }
 
-const arr = [435, 567, 8, 33, 346, 67, 678, 235, 225];
+function getNthMinElement(arr, nth) {
+    const sortedArr = bubbleSort(arr);
+    if (nth > arr.length) {
+        return arr[arr.length - 1];
+    }
+    return sortedArr[nth - 1];
+}
 
-console.log(bubbleSort(arr));
+const sampleArray = [235, 546, 23, 5245, 52, 6345, 82];
 
-// function defultParam({ firstName = 'John', lastName = 'Doe' } = {}) {
-
-// }
+console.log(getNthMinElement(sampleArray, 10));

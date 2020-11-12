@@ -5,19 +5,22 @@
 function binarySearch(arr, search) {
     let start = 0;
     let end = arr.length - 1;
-
+    // let counter = 0;
     while (start <= end) {
+        // counter += 1;
         let mid = Math.floor((start + end) / 2);
 
         if (arr[mid] === search) {
-            return true
+            return true;
         }
-        else if (arr[mid] < search)
+        else if (arr[mid] < search) {
             start = mid + 1;
-        else
+        }
+        else {
             end = mid - 1;
-        counter += 1;
+        }
     }
+    // console.log('futások száma:', counter);
     return false;
 }
 
