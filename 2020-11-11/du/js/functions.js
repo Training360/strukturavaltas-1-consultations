@@ -2,15 +2,12 @@ fnDeclaration();
 fnExpr();
 
 function fnDeclaration() {
-    console.log('fnDec');
+  console.log('fnDec');
 }
 
 var fnExpr = () => {
-    console.log('fnExp')
-}
-
-
-
+  console.log('fnExp');
+};
 
 // fnExpr = '10';
 
