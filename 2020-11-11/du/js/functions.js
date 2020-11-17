@@ -1,14 +1,14 @@
 fnDeclaration();
-fnExpr();
+fnExpr(); // TyprError
 
 function fnDeclaration() {
-  console.log('fnDec');
+    console.log('fnDec');
 }
 
-var fnExpr = () => {
-  console.log('fnExp');
+const fnExpr = () => {
+    console.log('fnExp');
 };
-
+const arr = [34, 65, 78, 99, 212, 1001];
 // fnExpr = '10';
 
 // const a = [1, 2, 3];

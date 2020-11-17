@@ -72,6 +72,6 @@ const gradeObj = {
     3: 'Közepes',
     4: 'Jó',
     5: 'Jeles',
-}
+};
 
 console.log(gradeObj[grade]);
