@@ -10,13 +10,18 @@
 
     <body>
 
+        <script src="../js/sort.js"></script>
+        <script src="../js/binary-search.js"></script>
         <script>
             /*
            Írd ki (igen vagy nem), hogy egy tetszőlegese elemszámú,
-           csak egész számokat tartalmazó tömb tartalmazza-e a 23-as számot! Használj logaritmikus keresést!
+           csak egész számokat tartalmazó tömb tartalmazza-e a 23-as számot!
+           Használj logaritmikus keresést!
            Nézz utána mi az, milyen feltételei vannak, és hogyan valósítható meg!
             */
-
+            const arr = [1, 2, 3, 4, 5, 6];
+            const sortedArray = bubbleSort(arr);
+            console.log(binarySearch(sortedArray, 2));
         </script>
     </body>
 
