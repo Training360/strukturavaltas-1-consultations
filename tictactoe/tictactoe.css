@@ -1,0 +1,28 @@
+ html {
+    font-size: 24px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.tictactoe {
+    display: flex;
+    flex-direction: column;
+}
+
+.tictactoe__row {
+    display: flex;
+}
+
+.tictactoe__cell {
+    border: 1px solid #ddd;
+    height: 2rem;
+    padding: .5rem;
+    width: 2rem;
+}
