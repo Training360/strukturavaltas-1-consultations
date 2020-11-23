@@ -27,7 +27,7 @@ const changeMatrixValue = (element) => {
     matrix[row][cell] = element.textContent;
 }
 
-// kattintáskor mi történjen
+// kattintáskor mi történjen, érdemes lenne több függvényre bontani
 const handleClick = (event) => {
     stepCount += 1;
     event.target.removeEventListener('click', handleClick);
