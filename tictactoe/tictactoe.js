@@ -44,7 +44,7 @@ const addListener = () => {
     });
 }
 
-// ha van győrztes minden elemről eltávolítom az esemányfigyelőt
+// ha van győrztes minden elemről eltávolítom az eseményfigyelőt
 const removeListener = () => {
     document.querySelectorAll('.tictactoe__cell').forEach(element => {
         element.removeListener('click', handleClick)
