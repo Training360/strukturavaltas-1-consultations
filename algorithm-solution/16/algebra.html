@@ -10,13 +10,14 @@
 
     <body>
 
+        <script src="algebra.js"></script>
         <script>
-            /*
-           Adott két azonos elemszámú, csak egész számokat tartalmazó tömb.
-           Külön tömbökbe készítsük el a két tömb: metszetét, unióját, különbségét, és descartes szorzatát.
-           Írassuk ki az új tömböket!
-            */
-
+            const arr1 = [1, 2, 3, 4, 5];
+            const arr2 = [3, 4, 5, 6, 7];
+            console.log(union(arr1, arr2));
+            console.log(section(arr1, arr2));
+            console.log(difference(arr1, arr2));
+            console.log(descartes(arr1, arr2));
         </script>
     </body>
 
