@@ -9,6 +9,7 @@ const openModalListener = () => {
 };
 
 const openModalHandler = () => {
+    // az add, remove esetében egyszerre több paramétert is megadhatok
     modal.classList.add('modal--show', 'modal--fade-in');
     body.classList.add('modal-opened');
     // nem a modalt helyezem focusba, hanem a benne lévő első focusable elemet.
@@ -38,7 +39,7 @@ openModalListener();
 closeModalListener();
 
 // Amit szép lenne megoldani: ne ugorjon ki a fókusz a modalból. 
-// Ha az utolsó fókuszálható elemen vagyunk, tehát a modal__not - ok gombon, és nyomunk egy Tab - ot
+// Ha az utolsó fókuszálható elemen vagyunk, tehát a modal__not-ok gombon, és nyomunk egy Tab - ot
 // akkor ugorjon vissza a fókusz a firstFocusableElement-re
 // Ha valakit érdekel egy akadálymentes megolás:
 // https://hiddedevries.nl/en/blog/2017-01-29-using-javascript-to-trap-focus-in-an-element
