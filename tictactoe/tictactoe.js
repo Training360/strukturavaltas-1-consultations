@@ -6,7 +6,7 @@ const cols = 3;
 // lépések száma
 let stepCount = 0;
 // az aktuális jel
-let mark = 'X'
+let mark = 'X';
 
 // csak feltöltöm a mátrixot (valjában opcionális lépés is lehet)
 const initState = () => {
@@ -19,20 +19,33 @@ const initState = () => {
     }
 }
 
-// a mátrix egy elemének értéket adok, az adott elem data attrinutumait 
+// a mátrix egy elemének értéket adok, az adott elem data attributumait 
 // felhasználva nyerem ki az értéket
 const changeMatrixValue = (element) => {
+    // element.dataset.cell = element.getAttribute('data-cell'))
     const row = parseInt(element.dataset.row, 10);
     const cell = parseInt(element.dataset.cell, 10);
     matrix[row][cell] = element.textContent;
 }
 
+const increaseCounter = () => {
+    stepCount += 1;
+}
+
+const modifyCell = (element) => {
+    element.removeEventListener('click', handleClick);
+    element.textContent = mark;
+}
+
+const setMark = () => {
+    mark = mark === 'X' ? 'O' : 'X';
+}
+
 // kattintáskor mi történjen, érdemes lenne több függvényre bontani
 const handleClick = (event) => {
-    stepCount += 1;
-    event.target.removeEventListener('click', handleClick);
-    event.target.textContent = mark;
-    mark = mark === 'X' ? 'O' : 'X';
+    increaseCounter();
+    modifyCell(event.target);
+    setMark();
     changeMatrixValue(event.target);
     checkWinner();
 }
