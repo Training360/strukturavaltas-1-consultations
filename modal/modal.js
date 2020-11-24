@@ -28,8 +28,8 @@ const closeModalHandler = () => {
     body.classList.remove('modal-opened');
     // Mivel a display-t nem lehet animálni, ezért kell a setTimeout
     // A setTimeout iőzítése ugyanannyi legyen, mint a CSS-ben az animációjé
-    // Trmészetesen megoldható lett volna a feladat úgy is, hogy a dispaly tulajdonságot nem módosítom,
-    // ilyen esetben a setTimeou-ot sem kellene, de ez is egy jó megoldás
+    // Természetesen megoldható lett volna a feladat úgy is, hogy a display tulajdonságot nem módosítom,
+    // ilyen esetben a setTimeout-t sem kellene, de ez is egy jó megoldás
     setTimeout(() => {
         modal.classList.remove('modal--show', 'modal--fade-out');
     }, 300)
@@ -41,7 +41,7 @@ closeModalListener();
 // Amit szép lenne megoldani: ne ugorjon ki a fókusz a modalból. 
 // Ha az utolsó fókuszálható elemen vagyunk, tehát a modal__not-ok gombon, és nyomunk egy Tab - ot
 // akkor ugorjon vissza a fókusz a firstFocusableElement-re
-// Ha valakit érdekel egy akadálymentes megolás:
+// Ha valakit érdekel egy akadálymentes megoldás:
 // https://hiddedevries.nl/en/blog/2017-01-29-using-javascript-to-trap-focus-in-an-element
 // Egy másik trükkös megoldás:
 // https://css-tricks.com/a-css-approach-to-trap-focus-inside-of-an-element/
