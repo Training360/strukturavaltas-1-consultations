@@ -27,7 +27,6 @@ body {
     left:0;
     position: fixed;
     top:0;
-    z-index: 1000;
 }
 
 .modal--show{
@@ -62,20 +61,19 @@ body {
 }
 
 .modal__overlay {
-    align-items: center;
     background: rgba(0,0,0,.25);
-    display: flex;
-    flex-direction: column;
     height: 100vh;
-    justify-content: center;
     width: 100vw;
+    z-index: 1000;
 }
 
 .modal__content {
     background: #fff;  
     box-shadow: .25rem .25rem .5rem rgba(0,0,0,.25);  
     padding: 1rem;
+    position: absolute;
     width:100%;
+    z-index: 1001;
 }
 
 @media(min-width:560px)  {

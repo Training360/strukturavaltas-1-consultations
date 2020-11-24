@@ -111,28 +111,28 @@
 
         <!--
             Én 1 közös divbe tettem most a modal tartalmi részét és az overlayt, de
-            ez sem kötelező ilyen formában, lehet két külön div is, amelyik szimpatikusabb
+            ez sem kötelező ilyen formában, lehet az overlaybe is tenni a contentet
+            Tabindex miatt alapba nem lesz billentyűzetről elérhető az elem. Akkor sem ha a display nem none
         -->
-        <div class="modal">
-            <div class="modal__overlay">
-                <div class="modal__content">
-                    <div class="modal__close">
-                        <button class="modal__close-button">&times;</button>
-                    </div>
-                    <div class="modal__header">
-                        <h3 class="modal__title">Title</h3>
-                    </div>
-                    <div class="modal__body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt pariatur tempore debitis
-                        in
-                        odio
-                        doloribus nesciunt illum eos, omnis, ratione cum ipsa aliquid quaerat maiores. Cum aliquam
-                        asperiores consectetur nemo.
-                    </div>
-                    <div class="modal__footer">
-                        <button class="modal__ok btn btn--green">Ok</button>
-                        <button class="modal__not-ok btn btn--red">Not ok</button>
-                    </div>
+        <div class="modal" tabindex="-1">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+                <div class="modal__close">
+                    <button class="modal__close-button">&times;</button>
+                </div>
+                <div class="modal__header">
+                    <h3 class="modal__title">Title</h3>
+                </div>
+                <div class="modal__body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt pariatur tempore debitis
+                    in
+                    odio
+                    doloribus nesciunt illum eos, omnis, ratione cum ipsa aliquid quaerat maiores. Cum aliquam
+                    asperiores consectetur nemo.
+                </div>
+                <div class="modal__footer">
+                    <button class="modal__ok btn btn--green">Ok</button>
+                    <button class="modal__not-ok btn btn--red">Not ok</button>
                 </div>
             </div>
         </div>

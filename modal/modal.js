@@ -19,7 +19,11 @@ const openModalHandler = () => {
 };
 
 const closeModalListener = () => {
-    modal.addEventListener('click', closeModalHandler);
+    // A modalban lévő gombokra és az overlay rétegre kattintva is zórjuk be a modalt
+    const elements = document.querySelectorAll('.modal__overlay, .modal button')
+    elements.forEach(element => {
+        element.addEventListener('click', closeModalHandler);
+    })
 };
 
 const closeModalHandler = () => {
