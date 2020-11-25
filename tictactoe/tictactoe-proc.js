@@ -92,7 +92,7 @@ const checkDiagonalValues = () => {
     const secondDiagonal = [];
     for (let i = 0; i < matrix.length; i += 1) {
         firstDiagonal.push(matrix[i][i]);
-        secondDiagonal.push(matrix[i][matrix[i.length - i]])
+        secondDiagonal.push(matrix[i][matrix[i].length - i - 1])
     }
     return checkValues([firstDiagonal, secondDiagonal]);
 }

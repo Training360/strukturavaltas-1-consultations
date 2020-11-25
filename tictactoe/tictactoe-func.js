@@ -70,7 +70,7 @@ const checkColumnValues = () =>
 const checkDiagonalValues = () =>
     checkValues([
         matrix.map((arr, i) => matrix[i][i]),
-        matrix.map((arr, i) => matrix[i][matrix[i.length - i]])
+        matrix.map((arr, i) => matrix[i][matrix[i].length - i - 1])
     ])
 
 const checkWinner = () => {
