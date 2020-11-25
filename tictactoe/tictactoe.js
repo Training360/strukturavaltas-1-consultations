@@ -17,6 +17,11 @@ const initState = () => {
             matrix[i][j] = null;
         }
     }
+    // [
+    //     [null, null, null],
+    //     [null, null, null],
+    //     [null, null, null],
+    // ]
 }
 
 // a mátrix egy elemének értéket adok, az adott elem data attributumait 
@@ -65,16 +70,25 @@ const removeListener = () => {
 }
 
 // Megnézem hogy van e olyan sor, ahol minden elem ugyanaz
-const checkRowValues = () => {
-    const values = matrix.map(row =>
+const checkRowValues = (arr) => {
+    const values = arr.map(row =>
         row.every((value) => value === 'X') ||
         row.every((value) => value === 'O'))
-    return values.indexOf(true) !== -1 ? true : false;
+    return values.indexOf(true) !== -1;
 }
 
 // Megnézem hogy van e olyan oszlop, ahol minden elem ugyanaz
 // TODO: Meg kell írnod, boolean adjon vissza
-const checkColumnValues = () => { }
+const checkColumnValues = () => {
+    const columns = [];
+    for (let i = 0; i < matrix.length; i += 1) {
+        columns[i] = [];
+        for (let j = 0; j < matrix[i].length; j++) {
+            columns[i][j] = matrix[j][i];
+        }
+    }
+    return checkRowValues(columns);
+}
 
 // Megnézem hogy van e olyan oszlop, ahol minden elem ugyanaz
 // TODO: Meg kell írnod, boolean adjon vissza
@@ -85,7 +99,8 @@ const checkDiagonalValues = () => { }
 const checkWinner = () => {
     // Akár a checkRowValues, checkColumnValues, checkDiagonalValues true, akkor van győztes
     // Csak azért van itt a log hogy lássátok hogy true akkor lesz ha van olyan sor ahol minden elem ugyanaz
-    console.log(checkRowValues());
+    console.log(checkRowValues(matrix));
+    console.log(checkColumnValues());
 }
 
 initState();

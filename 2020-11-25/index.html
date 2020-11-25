@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            const falsy = [false, 0, undefined, '', NaN, null];
+            for (let i = 0; i < falsy.length; i += 1) {
+                if (!falsy[i]) {
+                    console.log('false', falsy[i]);
+                }
+            }
+
+            /*
+            Írj egy függvényt, ami első paraméterként egy karaktert kap, 
+            a többi paraméter pedig tetszőleges számú tömb, 
+            amik stringeket tartalmaznak!
+            A függvény:
+                összefűzi egy tömbbe az összes elemet,
+                eltávolítja az ismétlődő elemeket,
+                eltávolítja az összes olyan stringet, ami tartalmazza az első paraméterként megadott karaktert,
+                eltávolítja a stringek végén lévő white space karaktert
+                visszaadja ezt az új tömböt.
+            */
+
+            function customFilter(char, ...arrays) {
+                const concatedArray = arrays.flat()
+                return concatedArray
+                    .flat()
+                    .filter((item, index) => concatedArray.indexOf(item) === index)
+                    .filter(item => item.indexOf(char) === -1)
+                    .map(item => item.trimEnd());
+            }
+
+            console.log(customFilter('a', ['b ', 'asd', 'fgfg'], ['b ', 'fghgf   ', 'gfhf']));
+        </script>
+    </body>
+
+</html>
