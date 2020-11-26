@@ -22,7 +22,6 @@ const deleteSigns = () => {
         });
 }
 
-
 const increaseCounter = () => {
     stepCount += 1;
 }
@@ -68,9 +67,14 @@ const checkColumnValues = () =>
     checkValues(matrix.map((arr, i) => arr.map((item, j) => matrix[j][i])))
 
 const checkDiagonalValues = () =>
+    // [
+    //     [1, 2, 3],
+    //     [4, 5, 6],
+    //     [7, 8, 9],
+    // ]
     checkValues([
-        matrix.map((arr, i) => matrix[i][i]),
-        matrix.map((arr, i) => matrix[i][matrix[i].length - i - 1])
+        matrix.map((arr, i) => arr[i]),
+        matrix.map((arr, i) => arr[i][cols - i - 1])
     ])
 
 const checkWinner = () => {
