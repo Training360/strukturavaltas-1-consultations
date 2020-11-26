@@ -4,13 +4,14 @@ const firstLesson = (...numbers) => {
     for (let i = 0; i < numbers.length; i += 1) {
         big = typeof numbers[i] === 'bigint' || !Number.isSafeInteger(numbers[i]) || !Number.isSafeInteger(sum);
         sum = big ? BigInt(sum) : sum;
-        sum += big ? BigInt(numbers[i]) : sum += numbers[i];
+        sum += big ? BigInt(numbers[i]) : numbers[i];
     }
     console.log(typeof sum, sum);
     return sum;
 }
 
-firstLesson(42354235325456464564654654654654, 235342542352354, 23353253245);
+firstLesson(1, 2, 3);
+firstLesson(1, 2, 3n, 4, 5);
 
 const converter = (number) => ({
     binary: number.toString(2),
