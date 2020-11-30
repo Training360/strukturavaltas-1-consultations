@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            html {
+                font-size: 16px;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .container {
+                display: flex;
+            }
+
+            .column {
+                display: flex;
+                flex-direction: column;
+                width: 100px;
+            }
+
+            button {
+                display: block;
+                height: 2rem;
+                line-height: 2rem;
+                margin: .25rem;
+            }
+
+            .tall {
+                flex-grow: 1;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="column">
+                <input type="text" class="output">
+            </div>
+            <div class="column">
+                <button data-value="1" class="calc__num">1</button>
+                <button data-value="2" class="calc__num">2</button>
+                <button data-value="3" class="calc__num">3</button>
+                <button data-value="4" class="calc__num">4</button>
+            </div>
+            <div class="column">
+                <button>E</button>
+                <button class="tall">F</button>
+            </div>
+        </div>
+
+        <script>
+            const calcs = {
+                '+': function (a, b) { return a + b },
+                '-': function (a, b) { return a - b },
+                '/': function (a, b) { return a / b },
+                '*': function (a, b) { return a * b }
+            }
+
+            // const signs = ['+'];
+
+            // for (let i = 0; i < signs.length; i += 1) {
+            //     console.log(calcs[signs[i]](10, 20));
+            // }
+
+            function handleClick() {
+                const keys = document.querySelectorAll('.calc__num');
+                keys.forEach(key => {
+                    document.addEventListener('click', () => {
+                        writeOutput(event.target.dataset.value);
+                    })
+                })
+            }
+
+            function writeOutput(value) {
+                document.querySelector('.output').value += value;
+            }
+
+            let calcString = '';
+            calcString += '23+45.45-34';
+            const acceptablesigns = ['+', '-', '/', '*']
+            const nums = [];
+            const signs = [];
+
+            // 2 függvény
+            // input ellenőrzés
+            let num = '';
+            for (let i = 0; i < calcString.length; i += 1) {
+                if (acceptablesigns.indexOf(calcString[i]) === -1) {
+                    num += calcString[i];
+                }
+                else {
+                    nums.push(parseFloat(num));
+                    num = '';
+                    signs.push(calcString[i])
+                }
+            }
+            nums.push(parseFloat(num));
+            console.log(nums, signs);
+
+
+            // eval(console.log(10 + 20));
+
+            // document.querySelector('.tall').addEventListener('click', () => {
+            //     console.log(event);
+            // })
+        </script>
+    </body>
+
+</html>

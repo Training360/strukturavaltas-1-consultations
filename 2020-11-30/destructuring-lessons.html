@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+            const user = {
+                firstName: 'John',
+                lastName: 'Doe'
+            };
+
+            const { lastName = 'unknown', firstName = 'unknown', job = 'unknown' } = user;
+
+            const {
+                lastName: l = 'unknown',
+                firstName: f = 'unknown',
+                job: j = 'unknown' }
+                = user;
+
+            console.log(lastName, firstName, job);
+            console.log(l, f, j);
+
+            const names = ['John', 'Jane', 'Judith', 'Jennefer', 'Jeremiah', 'Johnny'];
+            const [, a, , b, , c] = names;
+            console.log(a, b, c);
+        </script>
+    </body>
+
+</html>
