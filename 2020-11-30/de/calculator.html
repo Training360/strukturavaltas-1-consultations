@@ -77,7 +77,7 @@
             function handleClick() {
                 const keys = document.querySelectorAll('.calc__num');
                 keys.forEach(key => {
-                    document.addEventListener('click', () => {
+                    key.addEventListener('click', () => {
                         writeOutput(event.target.dataset.value);
                     })
                 })
@@ -89,7 +89,7 @@
 
             let calcString = '';
             calcString += '23+45.45-34';
-            const acceptablesigns = ['+', '-', '/', '*']
+            const acceptableSigns = ['+', '-', '/', '*']
             const nums = [];
             const signs = [];
 
@@ -97,7 +97,7 @@
             // input ellenőrzés
             let num = '';
             for (let i = 0; i < calcString.length; i += 1) {
-                if (acceptablesigns.indexOf(calcString[i]) === -1) {
+                if (acceptableSigns.indexOf(calcString[i]) === -1) {
                     num += calcString[i];
                 }
                 else {
