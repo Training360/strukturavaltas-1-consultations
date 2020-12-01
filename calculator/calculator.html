@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="calculator.css">
+    </head>
+
+    <body>
+
+        <div class="calculator">
+            <div class="calculator__output">
+                <input type="text" class="calculator__output-value" readonly>
+            </div>
+            <div class="calculator__buttons">
+                <div class="calculator__column">
+                    <button data-value="+" class="calculator__button calculator__button--darker">+</button>
+                    <button data-value="7" class="calculator__button">7</button>
+                    <button data-value="4" class="calculator__button">4</button>
+                    <button data-value="1" class="calculator__button">1</button>
+                    <button data-value="0" class="calculator__button">0</button>
+                </div>
+                <div class="calculator__column">
+                    <button data-value="-" class="calculator__button calculator__button--darker">-</button>
+                    <button data-value="8" class="calculator__button">8</button>
+                    <button data-value="5" class="calculator__button">5</button>
+                    <button data-value="2" class="calculator__button">2</button>
+                    <button data-value="." class="calculator__button">.</button>
+                </div>
+                <div class="calculator__column">
+                    <button data-value="*" class="calculator__button calculator__button--darker">&times;</button>
+                    <button data-value="9" class="calculator__button">9</button>
+                    <button data-value="6" class="calculator__button">6</button>
+                    <button data-value="3" class="calculator__button">3</button>
+                    <button data-value="C" class="calculator__button calculator__button--clear">C</button>
+                </div>
+                <div class="calculator__column">
+                    <button data-value="/" class="calculator__button calculator__button--darker">&div;</button>
+                    <button data-value="=" class="calculator__button calculator__button--equal">=</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="calculator.js"></script>
+    </body>
+
+</html>
