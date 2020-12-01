@@ -33,3 +33,17 @@ function customDateFormats(date) {
 }
 
 console.log(customDateFormats(new Date()));
+
+function countOfWorkingDays(from, to) {
+    let counter = 0;
+    for (let day = from; day <= to; day.setDate(day.getDate() + 1)) {
+        if (day.getDay() > 0 && day.getDay() < 6) {
+            counter += 1;
+        }
+    }
+    return counter;
+}
+
+const from = new Date(2020, 10, 1);
+const to = new Date(2020, 11, 1);
+console.log(countOfWorkingDays(from, to));
