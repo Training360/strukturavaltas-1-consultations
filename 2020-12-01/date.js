@@ -44,6 +44,6 @@ function countOfWorkingDays(from, to) {
     return counter;
 }
 
-const from = new Date(2020, 10, 1);
-const to = new Date(2020, 11, 1);
+const from = new Date(2020, 0, 1);
+const to = new Date();
 console.log(countOfWorkingDays(from, to));
