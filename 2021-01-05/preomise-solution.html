@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Írj egy másik függvényt, mely paraméterként szintén egy tömböt kap. A függvény visszatérési érték egy Promise.
+        // A Promise resolved lesz, amennyiben a tömb minden eleme string, és visszatér az ABC szerinti rendezett tömbbel.
+        // Ha nem minden elem string, akkor a Promise rejected lesz, és kiírja a konzolra: Error: Not all items in the array are strings!
+        // Ha a sorba rendezés során hiba történik akkor is rejected lesz a Promise, a visszatérési érték:
+        // Error: Something went wrong with sorting words.
+        const stringArray = ['baba', 'alma', 'cucu', 'mama'];
+        const mixedArray = ['baba', 'alma', 'cucu', 1];
+
+        const sortStringArray = (arr) => {
+            return new Promise((resolve,reject) => {
+                const everyElementIsAString = arr.every((item) => typeof item === 'string');
+                everyElementIsAString 
+                ? resolve(arr.sort()) 
+                : reject(' Error: Not all items in the array are strings!');
+            })
+        };
+
+        // resolve
+        sortStringArray(stringArray)
+            .then(console.log)
+            .catch(console.error)
+
+        // reject
+        sortStringArray(mixedArray)
+            .then(console.log)
+            .catch(console.error)
+    </script>
+</body>
+
+</html>
