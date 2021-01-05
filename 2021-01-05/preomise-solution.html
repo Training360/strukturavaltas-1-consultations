@@ -16,8 +16,6 @@
         // Ha nem minden elem string, akkor a Promise rejected lesz, és kiírja a konzolra: Error: Not all items in the array are strings!
         // Ha a sorba rendezés során hiba történik akkor is rejected lesz a Promise, a visszatérési érték:
         // Error: Something went wrong with sorting words.
-        const stringArray = ['baba', 'alma', 'cucu', 'mama'];
-        const mixedArray = ['baba', 'alma', 'cucu', 1];
 
         const sortStringArray = (arr) => {
             return new Promise((resolve,reject) => {
@@ -28,11 +26,13 @@
             })
         };
 
+        const stringArray = ['baba', 'alma', 'cucu', 'mama'];
         // resolve
         sortStringArray(stringArray)
-            .then(console.log)
-            .catch(console.error)
-
+        .then(console.log)
+        .catch(console.error)
+        
+        const mixedArray = ['baba', 'alma', 'cucu', 1];
         // reject
         sortStringArray(mixedArray)
             .then(console.log)
