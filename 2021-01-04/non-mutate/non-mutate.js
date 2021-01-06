@@ -17,8 +17,8 @@ const create = (name) => {
     id: gererateID(),
     name,
   };
-  // A people az eredeti tartalma, plusz az j elem legyen.
-  // LEcseréljük a people objectet egy újra nem pedig módsosítjuk
+    // A people az eredeti tartalma, plusz az j elem legyen.
+    // LEcseréljük a people objectet egy újra nem pedig módsosítjuk
   store.people = [...store.people, person];
   // a visszatérési érték az adott személy
   return person;
@@ -29,7 +29,8 @@ const update = ({ id, name }) => {
   const updatedPerson = { id, name };
   // Itt is lecseréljük a teljes people objectet
   store.people = store.people.map(
-      (person) => (person.id === id ? updatedPerson : person));
+    (person) => (person.id === id ? updatedPerson : person),
+  );
   // a visszatérési érték a frissített személy
   return updatedPerson;
 };
