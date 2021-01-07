@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            html {
+                font-size: 16px;
+            }
+
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .section {
+                padding: 1rem 0;
+            }
+
+            .section--yellow {
+                background: #ff9;
+            }
+
+            .gallery {
+                position: relative;
+                margin: 0 auto;
+                max-width: 1280px;
+                display: flex;
+                flex-direction: row;
+                flex-flow: wrap;
+                flex: 0 1 auto;
+            }
+
+            .gallery__item {
+                position: relative;
+                padding: 1rem;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            @media (min-width: 480px) {
+                .gallery__item {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+            }
+
+            @media (min-width: 720px) {
+                .gallery__item {
+                    flex: 0 0 25%;
+                    max-width: 25%;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <section class="section section--yellow">
+            <div class="gallery">
+                <div class="gallery__item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo dignissimos fugit repudiandae
+                        magni?
+                        Ipsum eum incidunt doloribus possimus, sit praesentium voluptatem minima quo quae illo autem
+                        fuga
+                        ullam nam qui!</p>
+                </div>
+                <div class="gallery__item">
+                    <p>Magnam culpa velit alias voluptate perferendis nihil nulla ipsum neque voluptates quos libero,
+                        sunt
+                        dolor autem non earum nostrum voluptatum cupiditate molestias reprehenderit inventore minus!
+                        Nisi
+                        quod iure aliquid. Recusandae?</p>
+                </div>
+                <div class="gallery__item">
+                    <p>Obcaecati maxime, laudantium nostrum reiciendis sint magni totam nihil dicta delectus voluptatum,
+                        cum
+                        saepe. Iure aperiam nobis sint? Architecto fugit eligendi, ab unde quas cumque. Porro deserunt
+                        debitis corrupti veritatis.</p>
+                </div>
+                <div class="gallery__item">
+                    <p>Libero atque possimus quidem nulla, nostrum adipisci quos sapiente maxime perspiciatis eius
+                        magni.
+                        Modi iste itaque ea veritatis atque commodi eius quaerat aliquam. Est doloribus culpa aliquam
+                        quis
+                        maxime aspernatur.</p>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>
