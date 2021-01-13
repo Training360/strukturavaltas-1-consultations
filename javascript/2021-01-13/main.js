@@ -46,7 +46,7 @@ function userFactory(name, age) {
     name,
     age,
     sayMyName() {
-      // lehet this nélkül is:
+      // lehet this nélkül is paraméterként kapja:
       // console.log(`My name is ${name}`);
       console.log(`My name is ${this.name}`);
     },
