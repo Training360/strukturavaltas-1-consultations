@@ -16,34 +16,34 @@ const findById = (id) => store.people.find((person) => person.id === id);
 
 // CREATE
 const create = (name) => {
-    const person = {
-        id: gererateID(),
-        name,
-    };
-    store.people.push(person);
-    // a visszatérési érték az adott személy
-    return person;
+  const person = {
+    id: gererateID(),
+    name,
+  };
+  store.people.push(person);
+  // a visszatérési érték az adott személy
+  return person;
 };
 
 // UPDATE
 const update = ({ id, name }) => {
-    const index = getIndexById(id);
-    store.people[index].name = name;
-    // a visszatérési érték a frissített személy
-    return store.people[index];
+  const index = getIndexById(id);
+  store.people[index].name = name;
+  // a visszatérési érték a frissített személy
+  return store.people[index];
 };
 
 // DELETE
 const remove = (id) => {
-    const index = getIndexById(id);
-    store.people.splice(index, 1);
-    //  visszatérési érték NINCS
+  const index = getIndexById(id);
+  store.people.splice(index, 1);
+  //  visszatérési érték NINCS
 };
 
 export {
-    getAll,
-    findById,
-    create,
-    update,
-    remove,
+  getAll,
+  findById,
+  create,
+  update,
+  remove,
 };
